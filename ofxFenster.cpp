@@ -83,11 +83,11 @@ void ofxFenster::init(ofxFensterListener* l, string name){
 	ofAddListener(ofEvents.draw, this, &ofxFenster::draw);
 
 	mainWinRef = glutGetWindow();
-	HGLRC rc1 = wglGetCurrentContext();
+	HGLRC rc1 = wglGetCurrentContext();	// by pilzinho
 	glutInitWindowSize(width, height);
 	winRef = glutCreateWindow(name.c_str());
-	HGLRC rc2 = wglGetCurrentContext();
-    wglShareLists(rc1, rc2);
+	HGLRC rc2 = wglGetCurrentContext();	// by pilzinho
+    wglShareLists(rc1, rc2);			// by pilzinho
 	glutDisplayFunc(displayWindow);
 	glutMouseFunc(mouseCallback);
 	glutReshapeFunc(winResize);
