@@ -12,6 +12,7 @@
 
 #include "ofMain.h"
 #include "ofAppGlutWindow.h"
+//seems code block wont link glut automatically we need to add include here
 #include <glut.h>
 
 class ofxFenster;
